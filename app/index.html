@@ -22,14 +22,15 @@
     <div class="chat-area" data-ng-controller="ChatCtrl">
 
       <div class="chat-mgs">
-        <div ng-repeat="message in chat.messages">{{message.text}}</div>
+        <div ng-cloak ng-repeat="message in chat.messages">
+          <em>{{message.from}}: </em>{{message.text}}</div>
       </div>
 
-      Add temporary name: 
-      <input type="text" id="chat-username" ng-model="name">
-      <input type="text" id="chat-input" ng-model="msgInput">
+      Add temporary username: 
+      <input type="text" id="chat-username" ng-model="username">
+      <input type="text" id="chat-input" ng-model="msgInput" placeholder="Type your message...">
 
-      <div id="play-btn" data-ng-click="AddMsg()"><a href="" class="btn">SEND</a></div>
+      <div id="play-btn" class="btn" data-ng-click="AddMsg()"><a href="">SEND</a></div>
 
     </div>
     <!-- End of chat area -->

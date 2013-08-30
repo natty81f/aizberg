@@ -22,8 +22,20 @@
     <div class="chat-area" data-ng-controller="ChatCtrl">
 
       <div class="chat-mgs">
-        <div ng-cloak ng-repeat="message in chat.messages">
-          <em>{{message.from}}: </em>{{message.text}}</div>
+        <div ng-cloak ng-repeat="message in chat.messages | limitTo:-19">
+          <em>{{message.from}}: </em>{{message.text}}<span>{{message.time}} </span></div>
+      </div>
+      
+      <div class="emoticon">
+        <a href="" data-ng-click="addEmo()"><img src="img/icons/happy.png"></a>
+
+        <a href="" data-ng-click="addEmo()"><img src="img/icons/stoked.png"></a>
+
+        <a href=""><img src="img/icons/love.png"></a>
+        <a href=""><img src="img/icons/omg.png"></a>
+        <a href=""><img src="img/icons/confused.png"></a>
+        <a href=""><img src="img/icons/tired.png"></a>
+        <a href=""><img src="img/icons/sad.png"></a>
       </div>
 
       Add temporary username: 

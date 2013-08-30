@@ -16,8 +16,8 @@ a{
 	text-decoration: none;
 	color: #fff; }
 
-span{
-	color: #00e4ff; }
+/*span{
+	color: #00e4ff; }*/
 
 .clear{
 	clear:both; }
@@ -46,7 +46,7 @@ div#logo img{
 
 .chat-mgs{
 	width: 100%;
-	height: 18em;
+	height: 20em;
 	background: black;
 	margin: .75em auto;
 	overflow: auto; }
@@ -54,6 +54,10 @@ div#logo img{
 #chat-username{
 	text-shadow: none;
 }	
+
+span{
+border: 15px;
+}
 
 #chat-input{
 	width: 99%;

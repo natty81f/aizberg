@@ -13,13 +13,12 @@ angular.module('wradio.controllers', []).
   		$scope.username = 'Guest' + Math.floor(Math.random()*101);
 
   	// callback
-  	// promise has to do with the asynchronicity of firebase
 	  	promise.then(function(){ 
 	  		$scope.AddMsg = function(){
 	  		$scope.chat.messages.push({
 	  			text: $scope.msgInput, 
 	  			from: $scope.username , 
-	  			time: new Date().toLocaleTimeString()
+	  			date: new Date().toLocaleString()
 	  			});
 	  		$scope.msgInput = "";
 	  		}
@@ -32,6 +31,8 @@ angular.module('wradio.controllers', []).
 
     }
  ]);
+
+ 
 
  
 

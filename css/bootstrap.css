@@ -127,7 +127,7 @@ textarea {
   font-family: inherit;
   font-size: 100%;
   margin: 0;
-  border: 5px solid #e5e5e5; 
+  border: 5px solid #c2c0c0; 
   padding: 5px;
 
 }
@@ -1352,10 +1352,10 @@ input[type="number"]::-webkit-inner-spin-button {
   padding: 6px 12px;
   font-size: 14px;
   line-height: 1.428571429;
-  color: #555555;
+  color: #777777;
   vertical-align: middle;
   background-color: #ffffff;
-  border: 1px solid #cccccc;
+  /*border: 1px solid #cccccc;*/
   border-radius: 4px;
   -webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);
   box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);
@@ -1605,7 +1605,7 @@ textarea.input-lg {
   vertical-align: middle;
   cursor: pointer;
   border: 1px solid transparent;
-  border-radius: 4px;
+  border-radius: 1px;
   white-space: nowrap;
   -webkit-user-select: none;
   -moz-user-select: none;
@@ -1643,7 +1643,7 @@ fieldset[disabled] .btn {
 .btn-default {
   color: #333333;
   background-color: #ffffff;
-  border-color: #cccccc;
+  /*border-color: #cccccc;*/
 }
 .btn-default:hover,
 .btn-default:focus,
@@ -1652,7 +1652,7 @@ fieldset[disabled] .btn {
 .open .dropdown-toggle.btn-default {
   color: #333333;
   background-color: #ebebeb;
-  border-color: #adadad;
+  /*border-color: #adadad;*/
 }
 .btn-default:active,
 .btn-default.active,
@@ -1679,8 +1679,8 @@ fieldset[disabled] .btn-default.active {
 }
 .btn-primary {
   color: #ffffff;
-  background-color: #428bca;
-  border-color: #357ebd;
+  background-color: #00cfff;
+  /*border-color: #357ebd;*/
 }
 .btn-primary:hover,
 .btn-primary:focus,
@@ -1688,8 +1688,8 @@ fieldset[disabled] .btn-default.active {
 .btn-primary.active,
 .open .dropdown-toggle.btn-primary {
   color: #ffffff;
-  background-color: #3276b1;
-  border-color: #285e8e;
+  background-color: #03a2d9;
+  /*border-color: #285e8e;*/
 }
 .btn-primary:active,
 .btn-primary.active,
@@ -1899,7 +1899,7 @@ fieldset[disabled] .btn-link:focus {
   padding: 10px 16px;
   font-size: 18px;
   line-height: 1.33;
-  border-radius: 6px;
+  border-radius: 1px;
 }
 .btn-sm,
 .btn-xs {

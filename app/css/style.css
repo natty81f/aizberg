@@ -12,42 +12,38 @@ a{
 	text-decoration: none;
 	color: #fff; }
 
-.clear{
-	clear:both; }
 /*--------------------------------------*/
 
 .navbar-brand img{
-  width: 160px;
-}
+  width: 160px; }
 
 .now_playing{
   background: black;
-  display: inline-block;
-}
+  display: inline-block; }
 
 .now_playing h3{
 	margin: 0;
   color: white;
-  padding: 6px;  }	
+  padding: 6px; }	
 
-.wrapper p{
-	text-align: center; }
 /*Start of chat room---------------------*/
 
 .chat-area{ }
 
+.chat-header h3{
+  font-weight: 700;
+}  
+
 .chat-mgs{
-	width: 100%;
 	height: 20em;
 	background: white;
 	margin: .75em auto;
-  border: solid 4px #00ffd3;
+  border: solid 5px #00ffd3;
   padding: 15px;
 	overflow: auto; }
 
 #chat-input{
-	width: 99%;
-	height: 3em;
+	height: 5em;
 	font-size: 100%;
 	background: white;
-	margin: .75em auto; }
+	margin: 1.5em auto; }

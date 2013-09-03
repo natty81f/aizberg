@@ -2,62 +2,69 @@
 <html lang="en" data-ng-app="wradio">
 <head>
   <meta charset="utf-8">
-  <title>W Radio</title>
+  <title>A I Z B E R G / Radio</title>
   <link rel="stylesheet" href="css/style.css"/>
-  <link rel="stylesheet" href="css/reset.css">
+  <link rel="stylesheet" href="css/bootstrap.css"/>
+  <link href='http://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,400,300,700,600' rel='stylesheet' type='text/css'>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
 </head>
+
 <body>
  
-  <div id="header">
-    <div id="logo">
-      <a href="index.html"><img src="img/weirdchild-logo.png" alt="weirdchild logo"></a>
+  <div class="navbar navbar-default navbar-fixed-top">
+    <div class="container">
+      <div class="navbar-header">
+        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+        <a class="navbar-brand" href="#"><img src="img/logo.png"></a>
+      </div>
+      <div class="navbar-collapse collapse">
+        
+        <ul class="nav navbar-nav navbar-right">
+          <li><a href="">Stuff</a></li>
+          <li><a href="">About</a></li>
+          <li><a href="">Contact</a></li>
+        </ul>
+      </div><!--/.nav-collapse -->
     </div>
   </div>
 
-  <div class="wrapper">
-    <div class="now_playing"><p>Now Playing!</p></div>
-    <iframe width="100%" height="110" scrolling="no" frameborder="no" src="https://w.soundcloud.com/player/?url=http%3A%2F%2Fapi.soundcloud.com%2Ftracks%2F94249817&amp;color=000000&amp;auto_play=false&amp;show_artwork=false"></iframe>
-  
+  <div class="container">
+      <div class="now_playing"><h3>Playing Now !</h3></div>
+ 
+      <iframe width="100%" height="450" scrolling="no" frameborder="no" src="https://w.soundcloud.com/player/?url=http%3A%2F%2Fapi.soundcloud.com%2Fplaylists%2F9866344&amp;color=00ffd3&amp;auto_play=false&amp;show_artwork=true"></iframe>
 
-    <div class="chat-area" data-ng-controller="ChatCtrl">
+      <div class="chat-area" data-ng-controller="ChatCtrl">
 
-      <div class="chat-mgs">
-        <div ng-cloak ng-repeat="message in chat.messages | limitTo:-19">
-          <em>{{message.from}}: </em>{{message.text}}<span>{{message.time}} </span></div>
+        <div class="chat-mgs">
+          <div ng-cloak ng-repeat="message in chat.messages | limitTo:-19">
+            {{message.from}}:{{message.text}}{{message.date}}</div>
+        </div>
+
+        Add your temporary username here: 
+        <input type="text" id="chat-username" ng-model="username">
+        <input type="text" id="chat-input" ng-model="msgInput" placeholder="Type your message...">
+
+        <div id="play-btn" class="btn" data-ng-click="AddMsg()"><a href="">SEND</a></div>
+
       </div>
-      
-      <div class="emoticon">
-        <a href="" data-ng-click="addEmo()"><img src="img/icons/happy.png"></a>
-
-        <a href="" data-ng-click="addEmo()"><img src="img/icons/stoked.png"></a>
-
-        <a href=""><img src="img/icons/love.png"></a>
-        <a href=""><img src="img/icons/omg.png"></a>
-        <a href=""><img src="img/icons/confused.png"></a>
-        <a href=""><img src="img/icons/tired.png"></a>
-        <a href=""><img src="img/icons/sad.png"></a>
-      </div>
-
-      Add temporary username: 
-      <input type="text" id="chat-username" ng-model="username">
-      <input type="text" id="chat-input" ng-model="msgInput" placeholder="Type your message...">
-
-      <div id="play-btn" class="btn" data-ng-click="AddMsg()"><a href="">SEND</a></div>
-
-    </div>
-    <!-- End of chat area -->
-
-  </div>  
- <!--  End of wrapper -->
-
+      <!-- End of chat area -->
+  </div>
   <!-- In production use:
   <script src="//ajax.googleapis.com/ajax/libs/angularjs/1.0.7/angular.min.js"></script>
   -->
   <script src="lib/angular/angular.js"></script>
   <script src="https://cdn.firebase.com/v0/firebase.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/angularFire/0.2.0/angularfire.min.js"></script>
+
   <script src="js/app.js"></script> 
   <script src="js/controllers.js"></script>
+  <script src="js/jquery.js"></script>
+  <script src="js/bootstrap.min.js"></script>
+
   
 </body>
 </html>

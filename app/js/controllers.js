@@ -5,8 +5,9 @@
 angular.module('wradio.controllers', []).
  controller('ChatCtrl', [
   	'$scope', 
+    '$timeout',
   	'angularFire',
-  	function($scope, angularFire ) {
+  	function($scope, $timeout, angularFire ) {
   		var url = 'https://wradio.firebaseio.com/chat';
   		var promise = angularFire(url, $scope, 'chat', {messages: []});
 
@@ -23,16 +24,21 @@ angular.module('wradio.controllers', []).
 	  		$scope.msgInput = "";
 	  		}
 
-	  		// $scope.AddEmo = function(){
-  			// $scope.msgInput.push({ img: $scope.emoticon })
-  			// }
-
   		});
 
     }
- ]);
+ ])
 
- 
+ .directive('autoScroll', function($timeout) {
+    return function(scope, elements, attrs) {
+      scope.$watch("chat.messages.length", function() {
+        $timeout(function() {
+          elements[0].scrollTop = elements[0].scrollHeight
+        });
+      });
+    }
+  });
+
 
  
 

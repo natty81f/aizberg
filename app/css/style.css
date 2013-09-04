@@ -32,10 +32,10 @@ a{
 
 .chat-mgs{
 	/*height: 20em;*/
-  height: 400px;
+  height: 380px;
 	background: white;
 	margin: .75em auto;
-  border: solid 5px #00ffd3;
+  border: solid 8px #00ffd3;
   padding: 10px;
 	overflow: auto; }
 

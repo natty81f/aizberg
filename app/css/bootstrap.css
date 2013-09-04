@@ -2320,7 +2320,7 @@ input[type="button"].btn-block {
   float: right;
   margin-right: 15px;
   padding: 9px 10px;
-  margin-top: 13px;
+  margin-top: 10px;
   margin-bottom: 8px;
   background-color: transparent;
   border: 1px solid transparent;
@@ -2328,8 +2328,8 @@ input[type="button"].btn-block {
 }
 .navbar-toggle .icon-bar {
   display: block;
-  width: 22px;
-  height: 2px;
+  width: 25px;
+  height: 3px;
   border-radius: 1px;
 }
 .navbar-toggle .icon-bar + .icon-bar {
@@ -2509,14 +2509,14 @@ input[type="button"].btn-block {
   background-color: transparent;
 }
 .navbar-default .navbar-toggle {
-  border-color: #dddddd;
+  /*border-color: #dddddd;*/
 }
 .navbar-default .navbar-toggle:hover,
 .navbar-default .navbar-toggle:focus {
   background-color: #dddddd;
 }
 .navbar-default .navbar-toggle .icon-bar {
-  background-color: #cccccc;
+  background-color: black;
 }
 .navbar-default .navbar-collapse,
 .navbar-default .navbar-form {

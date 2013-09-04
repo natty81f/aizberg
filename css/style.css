@@ -31,7 +31,8 @@ a{
   font-weight: 700; }  
 
 .chat-mgs{
-	height: 20em;
+	/*height: 20em;*/
+  height: 400px;
 	background: white;
 	margin: .75em auto;
   border: solid 5px #00ffd3;

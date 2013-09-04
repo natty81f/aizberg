@@ -40,8 +40,9 @@
         
       <div class="chat-header"><h3>CHAT ROOM</h3></div>
         <div class="chat-area" data-ng-controller="ChatCtrl">
-          <div class="chat-mgs col-md-8">
-            <div ng-cloak ng-repeat="message in chat.messages | limitTo:-20">
+          <div class="chat-mgs col-md-8" auto-scroll="chat.messages">
+            <div ng-cloak ng-repeat="message in chat.messages">
+            <!-- <div ng-cloak ng-repeat="message in chat.messages | limitTo:-20"> -->
               <div class="msg-container">
                 <strong>{{message.from}}</strong>:&nbsp;{{message.text}}
                 <div class="msg-date">{{message.date}}</div>

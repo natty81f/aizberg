@@ -1,5 +1,4 @@
 'use strict';
-
 /* Controllers */
 
 angular.module('wradio.controllers', []).
@@ -13,34 +12,30 @@ angular.module('wradio.controllers', []).
 
   		$scope.username = 'Guest' + Math.floor(Math.random()*101);
 
-  	// callback
-	  	promise.then(function(){ 
-	  		$scope.AddMsg = function(){
-	  		$scope.chat.messages.push({
-	  			text: $scope.msgInput, 
-	  			from: $scope.username , 
-	  			date: new Date().toLocaleString()
-	  			});
-	  		$scope.msgInput = "";
+  	  // callback
+	  	promise.then(function() { 
+	  		$scope.AddMsg = function() {
+  	  		$scope.chat.messages.push({
+  	  			text: $scope.msgInput, 
+  	  			from: $scope.username , 
+  	  			date: new Date().toLocaleString()});
+          $scope.msgInput = "";	
 	  		}
-
   		});
-
     }
  ])
 
- .directive('autoScroll', function($timeout) {
-    return function(scope, elements, attrs) {
-      scope.$watch("chat.messages.length", function() {
-        $timeout(function() {
-          elements[0].scrollTop = elements[0].scrollHeight
-        });
+// Enables auto-scroll for messages in chat window //
+.directive('autoScroll', function($timeout) {
+  return function(scope, elements, attrs) {
+    scope.$watch("chat.messages.length", function() {
+      $timeout(function() {
+        elements[0].scrollTop = elements[0].scrollHeight
       });
-    }
-  });
+    });
+  }
+});
 
-
- 
 
    
 

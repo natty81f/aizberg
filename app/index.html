@@ -35,13 +35,14 @@
   </header>
 
 
+  <div class="container">
+    <input type="button" id="loadTracks" class="button big" value="HAZY SUMMER" />
+    <input type="button" id="loadTracksTwo" class="button big" value="COFFEE SHOCK" />
+        <div  id="putTheWidgetHere"></div>  
+  </div>
 
   <div ng-view></div> 
 
-  <div class="container">
-    <input type="button" id="loadTracks" class="button big" value="Get This Setlist" />
-        <div id="putTheWidgetHere"></div>  
-  </div>
 
   <!-- In production use:
   <script src="//ajax.googleapis.com/ajax/libs/angularjs/1.0.7/angular.min.js"></script>
@@ -62,8 +63,14 @@
 
    $( "#loadTracks" ).click(function() {
       console.log("hello")
-       SC.oEmbed("http://soundcloud.com/forss/sets/soulhack", {color: "ff0066"},  document.getElementById("putTheWidgetHere"));      
+       SC.oEmbed("http://soundcloud.com/weirdchild/sets/hazy-summer", {color: "00ffd3" , height: 600},  document.getElementById("putTheWidgetHere"));      
    });
+
+
+   $( "#loadTracksTwo" ).click(function() {
+       SC.oEmbed("http://soundcloud.com/weirdchild/sets/coffeeshock", {color: "00ffd3"},  document.getElementById("putTheWidgetHere"));      
+   });
+
   </script>  
 
  

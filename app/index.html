@@ -34,17 +34,39 @@
     </div>
   </header>
 
+
+
   <div ng-view></div> 
+
+  <div class="container">
+    <input type="button" id="loadTracks" class="button big" value="Get This Setlist" />
+        <div id="putTheWidgetHere"></div>  
+  </div>
+
   <!-- In production use:
   <script src="//ajax.googleapis.com/ajax/libs/angularjs/1.0.7/angular.min.js"></script>
   -->
   <script src="lib/angular/angular.js"></script>
   <script src="https://cdn.firebase.com/v0/firebase.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/angularFire/0.2.0/angularfire.min.js"></script>
+  <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.0.7/angular-resource.min.js"></script>
   <script src="js/app.js"></script> 
   <script src="js/controllers.js"></script>
   <script src="js/jquery.js"></script>
   <script src="js/bootstrap.min.js"></script>
+  <script src="http://connect.soundcloud.com/sdk.js"></script>
+  
+  <script>
+   SC.initialize({
+    client_id: "eb5a34240081939292634b9f9009ce8c", 
+   });
+
+   $( "#loadTracks" ).click(function() {
+      console.log("hello")
+       SC.oEmbed("http://soundcloud.com/forss/sets/soulhack", {color: "ff0066"},  document.getElementById("putTheWidgetHere"));      
+   });
+  </script>  
+
  
 </body>
 </html>

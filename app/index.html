@@ -9,6 +9,10 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 </head>
 
+  <script src="js/jquery.js"></script>
+
+  <script src="http://connect.soundcloud.com/sdk.js"></script>
+  
 <body>
  
   <header>
@@ -35,11 +39,7 @@
   </header>
 
 
-  <div class="container">
-    <input type="button" id="loadTracks" class="button big" value="HAZY SUMMER" />
-    <input type="button" id="loadTracksTwo" class="button big" value="COFFEE SHOCK" />
-        <div  id="putTheWidgetHere"></div>  
-  </div>
+  
 
   <div ng-view></div> 
 
@@ -52,27 +52,10 @@
   <script src="https://cdnjs.cloudflare.com/ajax/libs/angularFire/0.2.0/angularfire.min.js"></script>
   <script src="js/app.js"></script> 
   <script src="js/controllers.js"></script>
-  <script src="js/jquery.js"></script>
-  <script src="js/bootstrap.min.js"></script>
-  <script src="http://connect.soundcloud.com/sdk.js"></script>
+  <!-- // <script src="js/jquery.js"></script> -->
+  <script src="js/bootstrap.min.js"></script>  <!-- <script src="http://connect.soundcloud.com/sdk.js"></script> -->
   
-  <script>
-   SC.initialize({
-    client_id: "eb5a34240081939292634b9f9009ce8c", 
-   });
-
-   $( "#loadTracks" ).click(function() {
-      console.log("hello")
-       SC.oEmbed("http://soundcloud.com/weirdchild/sets/hazy-summer", {color: "00ffd3" , height: 600},  document.getElementById("putTheWidgetHere"));      
-   });
-
-
-   $( "#loadTracksTwo" ).click(function() {
-       SC.oEmbed("http://soundcloud.com/weirdchild/sets/coffeeshock", {color: "00ffd3"},  document.getElementById("putTheWidgetHere"));      
-   });
-
-  </script>  
-
+  
  
 </body>
 </html>

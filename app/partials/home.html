@@ -1,6 +1,15 @@
  <div class="container">
 
-    <!-- <div class="now_playing"><h3>Playing Now !</h3></div> -->       
+    <!-- <div class="now_playing"><h3>Playing Now !</h3></div> -->
+  <div data-ng-controller="ChatCtrl">
+    <div ng-show="showPlaylist">
+      <input type="button" id="loadTracks" class="button big" value="HAZY SUMMER" />
+      <input type="button" id="loadTracksTwo" class="button big" value="COFFEE SHOCK" />
+          <div  id="putTheWidgetHere"></div>
+    </div>        
+  </div>
+
+
     <div class="chat-header"><h3>CHAT ROOM</h3></div>
         <div class="chat-area" data-ng-controller="ChatCtrl">
           <div class="chat-mgs col-md-8" auto-scroll="chat.messages">
@@ -26,6 +35,23 @@
           </div>  
 
         </div> <!-- End of chat area -->
+        <script>
+   SC.initialize({
+    client_id: "eb5a34240081939292634b9f9009ce8c", 
+   });
+
+   $("#loadTracks").click(function() {
+      console.log("hello")
+       SC.oEmbed("http://soundcloud.com/weirdchild/sets/hazy-summer", {color: "00ffd3" , height: 600},  document.getElementById("putTheWidgetHere"));      
+   });
+
+
+   $("#loadTracksTwo").click(function() {
+       SC.oEmbed("http://soundcloud.com/weirdchild/sets/coffeeshock", {color: "00ffd3"},  document.getElementById("putTheWidgetHere"));      
+   });
+
+  </script>  
+
          
  </div>  <!-- End of container -->
     

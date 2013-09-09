@@ -4,22 +4,44 @@
   <div data-ng-controller="ChatCtrl">
     <div ng-show="showPlaylist">
       <div class="row img-wrapper">
+
         <div id="nopad" class="col-xs-4 col-sm-4 col-md-2 "> 
           <a id="loadTracks" href=""><img class="img-responsive" src="img/coffeeeyes.jpg"></a>
-              <div class="details"><h4>COFFEE SHOCK</h4></div>
+            <div class="details"><h4>COFFEE SHOCK</h4></div>
         </div>
 
-        <div id="nopad" class="col-xs-4 col-sm-4 col-md-2 "><img class="img-responsive" id="loadTracksTwo" src="img/physical.jpg"></div>
-        <div id="nopad" class="col-xs-4 col-sm-4 col-md-2 "><img class="img-responsive" src="img/trippy.jpg"></div>
-        <div id="nopad" class="col-xs-4 col-sm-4 col-md-2 "><img class="img-responsive" src="img/books.jpg"></div>
-        <div id="nopad" class="col-xs-4 col-sm-4 col-md-2 " ><img class="img-responsive" src="img/discorebel.jpg"></div>
-        <div id="nopad" class="col-xs-4 col-sm-4 col-md-2 "><img class="img-responsive" src="img/paradise.jpg"></div>     
-      </div>
+        <div id="nopad" class="col-xs-4 col-sm-4 col-md-2 ">
+          <a id="loadTracksTwo" href=""><img class="img-responsive" src="img/physical.jpg"></a>
+            <div class="details"><h4>GET PHYSICAL</h4></div>
+        </div>
+
+        <div id="nopad" class="col-xs-4 col-sm-4 col-md-2 ">
+          <a id="loadTracksThree" href=""><img class="img-responsive" src="img/trippy.jpg"></a>
+            <div class="details"><h4>TRIPPY</h4></div>
+        </div>    
+
+        <div id="nopad" class="col-xs-4 col-sm-4 col-md-2 ">
+          <a id="loadTracksFour" href=""><img class="img-responsive" src="img/books.jpg"></a>
+            <div class="details"><h4>BOOK SLAVE</h4></div>
+        </div>
+
+        <div id="nopad" class="col-xs-4 col-sm-4 col-md-2 " >
+          <a id="loadTracksFive" href=""><img class="img-responsive" src="img/discorebel.jpg"></a>
+            <div class="details"><h4>DISCO REBEL</h4></div>
+        </div>
+
+        <div id="nopad" class="col-xs-4 col-sm-4 col-md-2 ">
+          <a id="loadTracksSix" href=""><img class="img-responsive" src="img/paradise.jpg"></a>
+            <div class="details"><h4>LOST IN PARADISE</h4></div>
+        </div> 
+
+      </div><!-- End of image-wrapper -->
+
 
       <!-- <input type="button" id="loadTracks" class="button big" value="HAZY SUMMER" />
       <input type="button" id="loadTracksTwo" class="button big" value="COFFEE SHOCK" /> -->
           <div  id="WidgetHere"></div>
-    </div>        
+    </div> <!-- End of showPlaylist -->       
   </div>
 
 
@@ -48,7 +70,7 @@
           </div>  
 
         </div> <!-- End of chat area -->
-        <script>
+  <script>
    SC.initialize({
     client_id: "eb5a34240081939292634b9f9009ce8c", 
    });

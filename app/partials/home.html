@@ -3,9 +3,21 @@
     <!-- <div class="now_playing"><h3>Playing Now !</h3></div> -->
   <div data-ng-controller="ChatCtrl">
     <div ng-show="showPlaylist">
-      <input type="button" id="loadTracks" class="button big" value="HAZY SUMMER" />
-      <input type="button" id="loadTracksTwo" class="button big" value="COFFEE SHOCK" />
-          <div  id="putTheWidgetHere"></div>
+      <div class="row img-wrapper">
+        <div id="nopad" class="col-xs-4 col-sm-4 col-md-2 "><img class="img-responsive" id="loadTracks" src="img/coffeeeyes.jpg"></div>
+        <div id="nopad" class="col-xs-4 col-sm-4 col-md-2 "><img class="img-responsive" id="loadTracksTwo" src="img/physical.jpg"></div>
+        <div id="nopad" class="col-xs-4 col-sm-4 col-md-2 "><img class="img-responsive" src="img/trippy.jpg"></div>
+        <div id="nopad" class="col-xs-4 col-sm-4 col-md-2 "><img class="img-responsive" id="loadTracks" src="img/books.jpg"></div>
+        <div id="nopad" class="col-xs-4 col-sm-4 col-md-2 " ><img class="img-responsive" id="loadTracksTwo" src="img/discorebel.jpg"></div>
+        <div id="nopad" class="col-xs-4 col-sm-4 col-md-2 "><img class="img-responsive" id="loadTracks" src="img/paradise.jpg"></div> 
+        
+           
+      </div>
+
+
+      <!-- <input type="button" id="loadTracks" class="button big" value="HAZY SUMMER" />
+      <input type="button" id="loadTracksTwo" class="button big" value="COFFEE SHOCK" /> -->
+          <div  id="WidgetHere"></div>
     </div>        
   </div>
 
@@ -42,12 +54,12 @@
 
    $("#loadTracks").click(function() {
       console.log("hello")
-       SC.oEmbed("http://soundcloud.com/weirdchild/sets/hazy-summer", {color: "00ffd3" , height: 600},  document.getElementById("putTheWidgetHere"));      
+       SC.oEmbed("http://soundcloud.com/weirdchild/sets/hazy-summer", {color: "00ffd3" , height: 600},  document.getElementById("WidgetHere"));      
    });
 
 
    $("#loadTracksTwo").click(function() {
-       SC.oEmbed("http://soundcloud.com/weirdchild/sets/coffeeshock", {color: "00ffd3"},  document.getElementById("putTheWidgetHere"));      
+       SC.oEmbed("http://soundcloud.com/weirdchild/sets/coffeeshock", {color: "00ffd3"},  document.getElementById("WidgetHere"));      
    });
 
   </script>  

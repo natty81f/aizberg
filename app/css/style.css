@@ -32,7 +32,6 @@ a{
   font-weight: 700; }  
 
 .chat-mgs{
-	/*height: 20em;*/
   height: 380px;
 	background: white;
 	margin: .75em auto;
@@ -51,5 +50,17 @@ a{
   padding: 5px; }
 
 .msg-date{
-  font-size: 70%;
-}   
+  font-size: 70%; }   
+
+#nopad{
+  padding-right: 0;
+  padding-left: 0; }
+
+/*#WidgetHere{
+  padding-top: 15px; } */
+
+.img-wrapper:first-child{
+  padding-left: 15px; }
+
+.img-wrapper:first-child{
+  padding-right: 15px; }

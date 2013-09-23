@@ -12,6 +12,10 @@ a{
 	text-decoration: none;
 	color: #fff; }
 
+span{
+  color: #00ffd3
+}  
+
 /*--------------------------------------*/
 .navbar-brand img{
   width: 160px; }
@@ -20,7 +24,7 @@ a{
   background: black;
   display: inline-block; }
 
-.now_playing h3{
+.now_playing h4{
 	margin: 0;
   color: white;
   padding: 6px;

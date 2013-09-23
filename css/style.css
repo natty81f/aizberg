@@ -86,8 +86,6 @@ a{
   padding-top: 15px; }
 
 /*Contact page starts*/
-.contact h1, .about h1,{
-  font-size: 5em;
-  font-weight: 700;
-  font-weight: bold; }
+.contact h1{
+  font-weight: 700; }
 
